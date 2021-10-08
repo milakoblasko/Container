@@ -1,20 +1,20 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import MicroFrontend from './MicroFrontend';
+import MicroFrontend from './MFrontend';
 import StaticFrontend from './StaticFrontend';
 import Navbar from './Components/Navbar';
 import Config from './Config';
 
-const MicrofrontendComponent = ({ history }) => (
-  <MicroFrontend
+const MfrontendComponent = ({ history }) => (
+  <MFrontend
     history={history}
-    host={Config.microfrontendHost}
-    name="Microfrontend"
+    host={Config.mfrontendHost}
+    name="Mfrontend"
   />
 );
 
-const StaticMicrofrontendComponent = () => <StaticFrontend />;
+const StaticMfrontendComponent = () => <StaticFrontend />;
 
 const Dashboard = () => (
   <>
@@ -26,8 +26,8 @@ const Dashboard = () => (
 const Routes = () => (
   <Switch>
     <Route exact path="/" component={Dashboard} />
-    <Route exact path="/microfrontend" component={MicrofrontendComponent} />
-    <Route exact path="/static" component={StaticMicrofrontendComponent} />
+    <Route exact path="/mfrontend" component={MfrontendComponent} />
+    <Route exact path="/static" component={StaticMfrontendComponent} />
   </Switch>
 );
 
