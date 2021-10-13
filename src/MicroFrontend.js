@@ -11,7 +11,7 @@ class MicroFrontend extends PureComponent {
     }
 
     const fetchedMicrofrontend = await fetch(`${host}/asset-manifest.json`);
-    const manifest = await fetchedMicrofrontend.json();
+    const manifest = await fetchedMfrontend.json();
     const script = document.createElement('script');
     script.id = scriptId;
     script.crossOrigin = '';
