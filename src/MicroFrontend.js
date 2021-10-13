@@ -10,7 +10,7 @@ class MicroFrontend extends PureComponent {
       return;
     }
 
-    const fetchedMicrofrontend = await fetch(`${host}/asset-manifest.json`);
+    const fetchedMfrontend = await fetch(`${host}/asset-manifest.json`);
     const manifest = await fetchedMfrontend.json();
     const script = document.createElement('script');
     script.id = scriptId;
