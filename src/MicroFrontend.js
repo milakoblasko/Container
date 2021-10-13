@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 
-class MicroFrontend extends PureComponent {
+class MFrontend extends PureComponent {
   componentDidMount = async () => {
     const { name, host } = this.props;
     const scriptId = `mfrontend-script-${name}`;
