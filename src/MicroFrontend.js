@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react';
 class MicroFrontend extends PureComponent {
   componentDidMount = async () => {
     const { name, host } = this.props;
-    const scriptId = `micro-frontend-script-${name}`;
+    const scriptId = `mfrontend-script-${name}`;
 
     if (document.getElementById(scriptId)) {
       this.renderMicroFrontend();
